@@ -3,6 +3,5 @@
 
 require_relative "../lib/day3"
 
-triangles = IO.foreach(File.join("data", "day3.txt")).with_object([]) {|line, a| a << line.split(" ").map(&:to_i) }
-valid_triangles = triangles.select {|t| Day3.valid_triangle? t }
-puts valid_triangles.length
+puts Day3.new.read_valid_triangles_by_row(File.join("data", "day3.txt")).length
+puts Day3.new.read_valid_triangles_by_col(File.join("data", "day3.txt")).length
