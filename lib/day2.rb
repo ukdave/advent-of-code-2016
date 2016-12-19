@@ -4,11 +4,13 @@ class Day2
              %w(4 5 6).freeze,
              %w(7 8 9).freeze].freeze
 
+  # rubocop:disable WordArray
   KEYPAD2 = [[nil, nil, "1", nil, nil].freeze,
              [nil, "2", "3", "4", nil].freeze,
              ["5", "6", "7", "8", "9"].freeze,
              [nil, "A", "B", "C", nil].freeze,
              [nil, nil, "D", nil, nil].freeze].freeze
+  # rubocop:enable all
 
   def calculate_code_keypad1 instructions
     calculate_code(instructions, KEYPAD1, [1, 1])
@@ -27,6 +29,7 @@ class Day2
     }[:code]
   end
 
+  # rubocop:disable AbcSize, CyclomaticComplexity, PerceivedComplexity, MethodLength
   def get_new_position line, start_pos, keypad
     line.each_char.with_object(start_pos.dup) do |c, new_pos|
       new_pos[1] -= 1 if c == "U" && new_pos[1].positive?             && !keypad[new_pos[1] - 1][new_pos[0]].nil?
@@ -35,4 +38,5 @@ class Day2
       new_pos[0] += 1 if c == "R" && new_pos[0] < (keypad.length - 1) && !keypad[new_pos[1]][new_pos[0] + 1].nil?
     end
   end
+  # rubocop:enable all
 end

@@ -6,6 +6,7 @@ class Day3
       .select {|t| valid_triangle? t }
   end
 
+  # rubocop:disable AbcSize, MultilineBlockChain, MethodLength
   def read_valid_triangles_by_col file_path
     IO.foreach(file_path)
       .map {|line| line.split(" ").map(&:to_i) }
@@ -17,6 +18,7 @@ class Day3
       }
       .select {|t| valid_triangle? t }
   end
+  # rubocop:enable all
 
   def valid_triangle? sides
     s = sides.sort
