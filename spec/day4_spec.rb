@@ -16,7 +16,13 @@ describe Day4 do
                "a-b-c-d-e-f-g-h-987[abcde]",
                "not-a-real-room-404[oarel]",
                "totally-real-room-200[decoy]"]
-      expect(subject.sum_valid_sector_ids(lines)).to be 1514
+      expect(subject.sum_valid_sector_ids(lines)).to eq 1514
+    end
+  end
+
+  describe "#decrypt_room_name" do
+    it "decrypts room names" do
+      expect(subject.decrypt_room_name("qzmt-zixmtkozy-ivhz", 343)).to eq "very encrypted name"
     end
   end
 end
