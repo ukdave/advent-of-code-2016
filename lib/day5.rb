@@ -20,4 +20,18 @@ class Day5
     }.join
   end
   # rubocop:enable all
+
+  # rubocop:disable AbcSize, CyclomaticComplexity, MethodLength, PerlBackrefs
+  def find_password2 door_id
+    password = Array.new(8) { nil }
+    index = 0
+    while password.any?(&:nil?)
+      result = find_interesting_hash door_id, index
+      pos = (result[:hash][5].match(/(\d)/) && $1.to_i) || nil
+      password[pos] = result[:hash][6] if !pos.nil? && pos < password.length && password[pos].nil?
+      index = result[:index] + 1
+    end
+    password.join
+  end
+  # rubocop:enable all
 end

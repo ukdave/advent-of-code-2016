@@ -13,4 +13,10 @@ describe Day5 do
       expect(subject.find_password("abc")).to eq "18f47a30"
     end
   end
+
+  describe "#find_password2" do
+    it "finds the password" do
+      expect(subject.find_password2("abc")).to eq "05ace8e3"
+    end
+  end
 end
