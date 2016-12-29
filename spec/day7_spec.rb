@@ -13,4 +13,16 @@ describe Day7 do
       expect(subject.supports_tls?("aaaa[qwer]tyui")).to eq false
     end
   end
+
+  describe "#supports_ssl?" do
+    it "returns true for addresses that support SSL" do
+      expect(subject.supports_ssl?("aba[bab]xyz")).to eq true
+      expect(subject.supports_ssl?("aaa[kek]eke")).to eq true
+      expect(subject.supports_ssl?("zazbz[bzb]cdb")).to eq true
+    end
+
+    it "returns false for addresses that do not support SSL" do
+      expect(subject.supports_ssl?("xyx[xyx]xyx")).to eq false
+    end
+  end
 end

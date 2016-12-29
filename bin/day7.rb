@@ -4,3 +4,4 @@
 require_relative "../lib/day7"
 
 puts Day7.new.select_tls_addresses(File.readlines(File.join("data", "day7.txt"))).length
+puts Day7.new.select_ssl_addresses(File.readlines(File.join("data", "day7.txt"))).length
