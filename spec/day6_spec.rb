@@ -1,8 +1,9 @@
 # frozen_string_literal: true
+
 require "day6"
 
 describe Day6 do
-  let(:input) { %w(eedadn drvtee eandsr raavrd atevrs tsrnev sdttsa rasrtv nssdts ntnada svetve tesnvt vntsnd vrdear dvrsen enarar) }
+  let(:input) { %w[eedadn drvtee eandsr raavrd atevrs tsrnev sdttsa rasrtv nssdts ntnada svetve tesnvt vntsnd vrdear dvrsen enarar] }
 
   describe "#decode" do
     it "decodes the message" do

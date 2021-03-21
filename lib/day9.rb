@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 class Day9
   # rubocop:disable AbcSize, MethodLength
   def decompress_v1 str

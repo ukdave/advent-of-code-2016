@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 class Day6
   def decode lines
     calculate_frequencies(lines).reduce([]) {|acc, elem|

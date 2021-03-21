@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 class Day7
   def select_tls_addresses addresses
     addresses.select {|address| supports_tls? address }

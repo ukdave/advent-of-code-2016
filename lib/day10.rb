@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 class Day10
   def initialize
     @bots = {}

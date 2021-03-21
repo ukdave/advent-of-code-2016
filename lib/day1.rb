@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Day1
   def shortest_path instructions
     position = {coords: [0, 0], angle: 0}
