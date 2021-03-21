@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 class Day4
   def sum_valid_sector_ids lines
     lines.reduce(0) do |acc, elem|

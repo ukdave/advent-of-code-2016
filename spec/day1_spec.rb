@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require "day1"
 
 describe Day1 do

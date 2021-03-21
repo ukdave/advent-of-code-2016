@@ -1,8 +1,9 @@
 # frozen_string_literal: false
+
 class Day2
-  KEYPAD1 = [%w(1 2 3).freeze,
-             %w(4 5 6).freeze,
-             %w(7 8 9).freeze].freeze
+  KEYPAD1 = [%w[1 2 3].freeze,
+             %w[4 5 6].freeze,
+             %w[7 8 9].freeze].freeze
 
   # rubocop:disable WordArray
   KEYPAD2 = [[nil, nil, "1", nil, nil].freeze,

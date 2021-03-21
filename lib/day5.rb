@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 require "digest"
 
 class Day5

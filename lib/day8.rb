@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 class Day8
   def initialize w = 50, h = 6
     @screen = Array.new(h) { Array.new(w) { "." } }

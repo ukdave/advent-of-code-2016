@@ -1,4 +1,5 @@
 # frozen_string_literal: false
+
 class Day3
   def read_valid_triangles_by_row file_path
     IO.foreach(file_path)
